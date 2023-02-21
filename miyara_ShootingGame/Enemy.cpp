@@ -1,5 +1,6 @@
 #include"DxLib.h"
 #include "Enemy.h"
+#include"BulletsBase.h"
 #include"StraightBullets.h"
 #include "SpiralBullet.h"
 

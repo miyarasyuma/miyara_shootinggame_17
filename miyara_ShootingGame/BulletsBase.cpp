@@ -1,5 +1,5 @@
 #include "BulletsBase.h"
-BulletsBase::BulletsBase(T_Location location, float radius, int 
+BulletsBase::BulletsBase(T_Location location, float radius, int damage
 	, T_Location speed):SphereCollider(location, radius),damage(damage),speed(speed)
 {
 

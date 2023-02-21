@@ -8,7 +8,7 @@
 Player::Player(T_Location location) :CharaBase(location, 10.f, T_Location{2,2}),score(0),life(10)
 {
 
-	//BulletsBase** bullets
+	//BulletsBase** bullets;
 	bullets = new BulletsBase * [30];
 	for (int i = 0; i < 30; i++)
 	{
@@ -94,10 +94,10 @@ void Player::Draw()
 
 void Player::Hit(int damage)
 {
-	if (0 < damage)
+	if (0 <= damage)
 	{
 		life -= damage;
-		if (life < 0)
+		if (life <= 0)
 		{
 			life = 0;
 		}

@@ -1,12 +1,13 @@
 #include "GameMainScene.h"
 #include"Recovery.h"
+#include"DxLib.h"
 
 #define SCREEN_WIDTH 1280
 #define SCREEN_HEIGHT 720
 
 GameMainScene::GameMainScene()
 {
-	T_Location location = T_Location{20,100};
+	T_Location location = T_Location{100,100};
 	player = new Player(location);
 
 
@@ -52,7 +53,8 @@ void GameMainScene::Update()
 		items[i]->Update();
 	}
 
-	BulletsBase** bullet = player->GetBullets();//プレイヤーの弾処理
+	BulletsBase** bullet = player->GetBullets();
+	//エネミーにダメージを与えられる
 	for (enemyCount = 0; enemyCount < 10; enemyCount++)
 	{
 		if (enemy[enemyCount] == nullptr)

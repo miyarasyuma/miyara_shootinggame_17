@@ -1,4 +1,5 @@
 #include"DxLib.h"
+#include"TitleScene.h"
 #include"SceneManager.h"
 #include"GameMainScene.h"
 #include"KeyManager.h"
@@ -28,7 +29,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	SetFontSize(20);		// 文字サイズを設定
 
 	//シーンマネージャーオブジェクトの作成
-	SceneManager sceneMng(dynamic_cast<AbstractScene*>(new GameMainScene()));
+	SceneManager sceneMng(dynamic_cast<AbstractScene*>(new TitleScene()));
 
 	// ゲームループ
 	while (ProcessMessage()==0)
