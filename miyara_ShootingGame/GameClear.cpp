@@ -1,24 +1,25 @@
-#include "GameClearScene.h"
+#include "GameClear.h"
 #include"DxLib.h"
 #include"TitleScene.h"
 #include"KeyManager.h"
 
-GameClearScene::GameClearScene()
+GameClear::GameClear()
 {
 
 }
 
-void GameClearScene::Update()
+void GameClear::Update()
 {
-
+	KeyManager::Update();
 }
 
-void GameClearScene::Draw()const
+void GameClear::Draw()const
 {
-
+	DrawFormatString(500, 500, 0xffffff, "GameClear");
+	DrawFormatString(500, 700, 0xffffff, "XÉLÅ[ÇâüÇµÇƒÇÀ");
 }
 
-AbstractScene* GameClearScene::ChangeScene()
+AbstractScene* GameClear::ChangeScene()
 {
 	if (KeyManager::OnKeyPressed(KEY_INPUT_X))
 	{
