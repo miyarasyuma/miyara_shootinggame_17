@@ -10,6 +10,10 @@ private:
 	Enemy** enemy;
 	ItemBase** items;
 
+protected:
+	int knockdown = 0;//倒したエネミーを数える
+	int enemys = 1;//１ステージのエネミー数
+
 public:
 	GameMainScene();
 	virtual ~GameMainScene()	//デストラクタ
@@ -20,5 +24,6 @@ public:
 	virtual void Update() override;  //描画以外の更新を実装する
 	virtual void Draw() const override;	//描画に関することを実装する
 	virtual AbstractScene* ChangeScene() override;	//シーンの変更処理
+	int Enemydown();//倒した数
 };
 

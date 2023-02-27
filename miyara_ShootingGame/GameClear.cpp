@@ -15,8 +15,8 @@ void GameClear::Update()
 
 void GameClear::Draw()const
 {
-	DrawFormatString(500, 500, 0xffffff, "GameClear");
-	DrawFormatString(500, 700, 0xffffff, "XÉLÅ[ÇâüÇµÇƒÇÀ");
+	DrawFormatString(500, 200, 0xffffff, "GameClear");
+	DrawFormatString(500, 300, 0xffffff, "Prease X");
 }
 
 AbstractScene* GameClear::ChangeScene()

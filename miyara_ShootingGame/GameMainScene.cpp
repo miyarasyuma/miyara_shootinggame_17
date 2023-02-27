@@ -1,4 +1,6 @@
 #include "GameMainScene.h"
+#include "GameClear.h"
+#include"GameOver.h"
 #include"Recovery.h"
 #include"DxLib.h"
 
@@ -7,7 +9,7 @@
 
 GameMainScene::GameMainScene()
 {
-	T_Location location = T_Location{100,100};
+	T_Location location = T_Location{600,500};
 	player = new Player(location);
 
 
@@ -201,8 +203,25 @@ void GameMainScene::Draw() const
 		items[i]->Draw();
 	}
 }
+
+int GameMainScene::Enemydown()
+{
+	knockdown++;
+	return knockdown;
+}
+
 //シーンの変更処理
 AbstractScene* GameMainScene::ChangeScene()
 {
+	if (knockdown == enemys) //敵を一定数倒すとクリア
+	{
+		return new GameClear();
+	}
+
+	if (player->LifeCheck())//プレイヤーのHPが０になるとゲームオーバー
+	{
+		return new GameOver();
+	}
+
 	return this;
 }
