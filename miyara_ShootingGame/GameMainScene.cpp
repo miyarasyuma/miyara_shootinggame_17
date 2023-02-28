@@ -12,12 +12,13 @@ GameMainScene::GameMainScene()
 	T_Location location = T_Location{600,500};
 	player = new Player(location);
 
-
 	enemy = new Enemy * [10];
 	for (int i = 0; i < 10; i++)
 	{
 		enemy[i] = nullptr;
 	}
+
+	
 
 	//Enemyを作る
 	//enemy[0] = new Enemy(T_Location{ 200, 0 });
@@ -141,11 +142,6 @@ void GameMainScene::Update()
 				enemy[enemyCount]->DeleteBullet(i);
 				i--;
 
-				//プレイヤーのHPが0になったらプレイヤーを消す
-				if (player->LifeCheck())
-				{
-
-				}
 			}
 		}
 	}
@@ -204,19 +200,15 @@ void GameMainScene::Draw() const
 	}
 }
 
-int GameMainScene::Enemydown()
-{
-	knockdown++;
-	return knockdown;
-}
+
 
 //シーンの変更処理
 AbstractScene* GameMainScene::ChangeScene()
 {
-	if (knockdown == enemys) //敵を一定数倒すとクリア
-	{
-		return new GameClear();
-	}
+	//if (1) //敵を倒すとクリア
+	//{
+	//	return new GameClear();
+	//}
 
 	if (player->LifeCheck())//プレイヤーのHPが０になるとゲームオーバー
 	{

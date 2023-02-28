@@ -3,6 +3,8 @@
 #include"BulletsBase.h"
 #include"StraightBullets.h"
 #include "SpiralBullet.h"
+#include"Diffusion.h"
+
 
 
 
@@ -129,7 +131,8 @@ void Enemy::Update()
 			else if (moveInfo[current].attackType == 2)
 			{
 				shotNum++;
-				bullets[bulletCount] = new SpiralBullet(GetLocation(), 2.f, (20 * shotNum));
+				bullets[bulletCount] = new Diffusion(GetLocation(), 2.f, (20 * shotNum));
+
 			}
 		}
 	}
