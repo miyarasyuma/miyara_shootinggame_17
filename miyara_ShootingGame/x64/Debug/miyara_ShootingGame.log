@@ -1,7 +1,6 @@
-﻿  Diffusion.cpp
-C:\Users\12105150\Desktop\C++\miyara_shootinggame\miyara_shootinggame_17\miyara_ShootingGame\Diffusion.cpp(13,10): warning C4244: '初期化中': 'double' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\12105150\Desktop\C++\miyara_shootinggame\miyara_shootinggame_17\miyara_ShootingGame\Diffusion.cpp(14,10): warning C4244: '初期化中': 'double' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\12105150\Desktop\C++\miyara_shootinggame\miyara_shootinggame_17\miyara_ShootingGame\Diffusion.cpp(29,56): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\12105150\Desktop\C++\miyara_shootinggame\miyara_shootinggame_17\miyara_ShootingGame\Diffusion.cpp(29,43): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\12105150\Desktop\C++\miyara_shootinggame\miyara_shootinggame_17\miyara_ShootingGame\Diffusion.cpp(29,26): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+﻿  Enemy2.cpp
+C:\Users\12105150\Desktop\C++\miyara_shootinggame\miyara_shootinggame_17\miyara_ShootingGame\Enemy2.cpp(44,82): warning C4305: '初期化中': 'double' から 'float' へ切り詰めます。
+C:\Users\12105150\Desktop\C++\miyara_shootinggame\miyara_shootinggame_17\miyara_ShootingGame\Enemy2.cpp(124,56): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\12105150\Desktop\C++\miyara_shootinggame\miyara_shootinggame_17\miyara_ShootingGame\Enemy2.cpp(124,43): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\12105150\Desktop\C++\miyara_shootinggame\miyara_shootinggame_17\miyara_ShootingGame\Enemy2.cpp(124,26): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
   miyara_ShootingGame.vcxproj -> C:\Users\12105150\Desktop\C++\miyara_shootinggame\miyara_shootinggame_17\x64\Debug\miyara_ShootingGame.exe

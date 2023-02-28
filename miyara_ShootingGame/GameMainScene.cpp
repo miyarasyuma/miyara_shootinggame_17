@@ -1,4 +1,5 @@
 #include "GameMainScene.h"
+#include "GameMainScene2.h"
 #include "GameClear.h"
 #include"GameOver.h"
 #include"Recovery.h"
@@ -84,6 +85,9 @@ void GameMainScene::Update()
 				//エネミーのHssdaa Pが０以下だったら、エネミーを削除します。
 				if (enemy[enemyCount]->HpCheck())
 				{
+
+					EnemyDown();//関数の呼び出し
+
 					for (int i = 0; i < 10; i++)
 					{
 						if (items[i] == nullptr)
@@ -201,18 +205,19 @@ void GameMainScene::Draw() const
 }
 
 
+int GameMainScene::EnemyDown()//カウントされた数字をもらう
+{
+	enemyDown++;
+	return enemyDown;//プラス1された状態のはず…
+}
+
 
 //シーンの変更処理
 AbstractScene* GameMainScene::ChangeScene()
 {
-	//if (1) //敵を倒すとクリア
-	//{
-	//	return new GameClear();
-	//}
-
-	if (player->LifeCheck())//プレイヤーのHPが０になるとゲームオーバー
+	if (enemyDown == enemyVolume)//ステージ移行
 	{
-		return new GameOver();
+		return new GameMainScene2();
 	}
 
 	return this;
